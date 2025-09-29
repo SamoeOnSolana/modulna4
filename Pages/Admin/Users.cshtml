@@ -1,0 +1,48 @@
+@page
+@model AdminUsersModel
+@{
+    ViewData["Title"] = "користувачі";
+}
+
+<div class="table-responsive">
+    <table class="table table-striped" id="usersTable">
+        <thead>
+            <tr>
+                <th>ім'я</th>
+                <th>email</th>
+                <th>статус</th>
+                <th>дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>oleksandr shalaiev</td>
+                <td>alex@example.com</td>
+                <td>активний</td>
+                <td>
+                    <button class="btn btn-sm btn-primary">редагувати</button>
+                    <button class="btn btn-sm btn-danger">видалити</button>
+                </td>
+            </tr>
+            <tr>
+                <td>taras shevchenko</td>
+                <td>taras@example.com</td>
+                <td>активний</td>
+                <td>
+                    <button class="btn btn-sm btn-primary">редагувати</button>
+                    <button class="btn btn-sm btn-danger">видалити</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#usersTable').DataTable();
+        });
+    </script>
+}

@@ -1,0 +1,39 @@
+@page
+@model ProfileModel
+@{
+    ViewData["Title"] = "профіль";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">інформація про користувача</h5>
+                <p class="card-text">тут буде детальна інформація про користувача</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3" style="max-width: 300px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="аватар" id="userAvatar">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">поточний користувач</h5>
+                        <p class="card-text">potochniy@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('userAvatar').addEventListener('click', function() {
+            alert('клік по аватару!');
+        });
+    </script>
+}
